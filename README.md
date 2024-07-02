@@ -1,9 +1,9 @@
 # Lizard Runner
 
-[![pyt](https://github.com/Uno-Takashi/lizard-runner/actions/workflows/pyt.yml/badge.svg?branch=main&event=push)](https://github.com/Uno-Takashi/lizard-runner/actions/workflows/pyt.yml)
-[![Lizard Runner](https://github.com/Uno-Takashi/lizard-runner/actions/workflows/lizard.yml/badge.svg?branch=main&event=push)](https://github.com/Uno-Takashi/lizard-runner/actions/workflows/lizard.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Uno-Takashi/lizard-runner/blob/main/LICENSE)
-[![Contributors](https://img.shields.io/github/contributors/Uno-Takashi/lizard-runner)](https://github.com/Uno-Takashi/lizard-runner/graphs/contributors)
+[![pyt](https://github.com/etn-ccis/lizard-runner/actions/workflows/pyt.yml/badge.svg?branch=main&event=push)](https://github.com/etn-ccis/lizard-runner/actions/workflows/pyt.yml)
+[![Lizard Runner](https://github.com/etn-ccis/lizard-runner/actions/workflows/lizard.yml/badge.svg?branch=main&event=push)](https://github.com/etn-ccis/lizard-runner/actions/workflows/lizard.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/etn-ccis/lizard-runner/blob/main/LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/etn-ccis/lizard-runner)](https://github.com/etn-ccis/lizard-runner/graphs/contributors)
 [![Python](https://img.shields.io/badge/Python-F9DC3E.svg?logo=python&style=flat)](https://www.python.org/)
 [![Docker](https://img.shields.io/badge/-Docker-EEE.svg?logo=docker&style=flat)](https://www.docker.com/)
 
@@ -47,14 +47,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Lizard Runner
-        uses: Uno-Takashi/Lizard-Runner@v3
+        uses: etn-ccis/Lizard-Runner@v3
 ```
 
 lizard execution options can be passed as arguments. For example, the case for setting up CCN and execution paths is as follows.
 
 ```yml
       - name: Lizard Runner
-        uses: Uno-Takashi/Lizard-Runner@v3
+        uses: etn-ccis/Lizard-Runner@v3
         with:
           path: "./src ./libs"
           CCN: "20"
@@ -80,7 +80,7 @@ For convenience, we have divided the arguments into several "classifications".
 - Flag Arguments
   - Flag Argument." false" or "true" is passed. if "true" the flag is enabled.
 
-The following is a summary of the arguments that can be specified. Details on the meaning of the arguments and the values to be given are provided in the [wiki](https://github.com/Uno-Takashi/lizard-runner/wiki).
+The following is a summary of the arguments that can be specified. Details on the meaning of the arguments and the values to be given are provided in the [wiki](https://github.com/etn-ccis/lizard-runner/wiki).
 
 |      **Name**     |     **classification** |         **Default**     |                                                                                                             **Description**                                                                                                            |
 |:-----------------:|:----------------------:|:-----------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
@@ -123,7 +123,7 @@ If the outputs is referenced in a later Action, it will look like this
 
 ```yml
       - name: Lizard Runner
-        uses: Uno-Takashi/Lizard-Runner@v3
+        uses: etn-ccis/Lizard-Runner@v3
         id: lizard
         with:
             input_file: "lizard_output.xml"
@@ -146,4 +146,4 @@ If the outputs is referenced in a later Action, it will look like this
 
 Develop according to [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow)
 
-If you have any questions, feel free to ask in the [Q&A](https://github.com/Uno-Takashi/lizard-runner/discussions/new?category=q-a)
+If you have any questions, feel free to ask in the [Q&A](https://github.com/etn-ccis/lizard-runner/discussions/new?category=q-a)
